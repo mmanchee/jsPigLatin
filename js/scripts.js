@@ -1,12 +1,3 @@
-
-
-
-//const array = input.match("a","i","e","o", "u");
-//console.log(array.length);
-
-//const array = input.match();
-
-
 $(document).ready(function(){
   $("#test-input1").submit(function(event) {
     event.preventDefault();
@@ -22,3 +13,23 @@ $(document).ready(function(){
     $("#result1").text(number1);
   });
 });
+
+// any word that begins with a vowel, add "way" to the end.
+
+// input: away
+// output: awayway
+
+// for consonants move first consonants to the end and ad "ay"
+
+// input: carefully
+// output: arefullycay
+
+// for 'qu' treat it as a consonant.
+
+// input: squirl
+// output: irlsquay
+
+// for 'y' treat it as a consonant.
+
+// input: yellow
+// output: ellowyay
