@@ -1,11 +1,10 @@
 function isVowel(input){
-  let word = input.join(" ");
+  let word = input.join("");
   word = word + "way";
   return word;
 }
 
-function isConsonant(word) {
-  const wordArray = word.split('');
+function isConsonant(wordArray) {
   for (i = 0; i < wordArray.length; i++) {
     if (/[^aeiou]/i.test(wordArray[0])) {
       if (wordArray[0] == "q") {
@@ -17,7 +16,7 @@ function isConsonant(word) {
         wordArray.push(wordArray[0]);
         wordArray.shift();
     } else {
-      word = wordArray.join("");
+      let word = wordArray.join("");
       word = word + "ay"; 
       return word;
     }
@@ -27,11 +26,11 @@ function isConsonant(word) {
 function pigLatin(input) {
   let inputArray = input.split(" ");
   for (let i = 0; i < inputArray.length; i++) {
-    letters = inputArray[i].split("");
+    let letters = inputArray[i].split("");
     if (/[aeiou]/i.test(letters[0])) {
       inputArray[i] = isVowel(letters);
     } else if (/[a-z]/i.test(letters[0])) {
-      inputArray[i] = isConsonant(Letters);
+      inputArray[i] = isConsonant(letters);
     } else {
       inputArray[i] = inputArray[i];
     }
@@ -54,10 +53,9 @@ $(document).ready(function(){
     };
     $("#result1").text(number1);
   });
-  $("test-input2").submit(function(event) {
+  $("#test-input2").submit(function(event) {
     event.preventDefault();
     let input2 = $("input#input2").val();
-
     let result2 = pigLatin(input2);
 
     $("#result2").text(result2);
