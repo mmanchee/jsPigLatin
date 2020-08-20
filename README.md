@@ -10,7 +10,7 @@ Creating a Pig Latin convertor. Takes the users input and converts it into Pig L
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
+* TTD
  - Any blank, numbers or special should stay the same. 
     * input: ?1 12!
     * output: ?1 12!
@@ -34,7 +34,8 @@ Creating a Pig Latin convertor. Takes the users input and converts it into Pig L
 
 ## Known Bugs
 
-
+- Pig Latin
+   * Punctuation at the end of the word is not handled, yet.
 
 ## Support and contact details
 
