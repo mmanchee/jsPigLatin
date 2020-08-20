@@ -56,7 +56,13 @@ $(document).ready(function(){
   $("#test-input2").submit(function(event) {
     event.preventDefault();
     let input2 = $("input#input2").val();
-    let result2 = pigLatin(input2);
+    let result2;
+
+    if (input2 === "") {
+      result2 = "Please enter something above.";
+    } else {
+      result2 = pigLatin(input2);
+    }
 
     $("#result2").text(result2);
   });
